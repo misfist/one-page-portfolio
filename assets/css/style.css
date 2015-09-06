@@ -4365,13 +4365,17 @@ section:after {
 section {
   padding-top: 2em;
   padding-bottom: 2em;
-  min-height: 850px;
+  min-height: 700px;
   background-position: center;
   background-size: cover;
-  background-repeat: no-repeat; }
+  background-repeat: no-repeat;
+  background-attachment: fixed; }
 
 #main-nav {
   background-color: #787874; }
+  #main-nav a,
+  #main-nav a:link {
+    color: #fff; }
 
 #home {
   padding-top: 240px;
@@ -4398,45 +4402,47 @@ section {
 
 #portfolio {
   background-image: url("http://static1.squarespace.com/static/52b9c541e4b05b51357ee1b8/t/555f58c1e4b025563eb623b0/1432312002451/coney_island_ferris_wheel-wallpaper-1440x900.jpg?format=2500w"); }
-  #portfolio li + li {
-    padding-top: 10px; }
-  #portfolio li .img-background {
-    background-position: center;
-    background-size: cover;
-    background-repeat: no-repeat;
-    overflow: hidden; }
-    #portfolio li .img-background.al-diaz {
-      background-image: url("http://sandbox.misfist.com/portfolio/assets/images/al-diaz.png"); }
-    #portfolio li .img-background.nyc-prepared {
-      background-image: url("http://sandbox.misfist.com/portfolio/assets/images/nyc-prepared.png"); }
-    #portfolio li .img-background.action-switchboard {
-      background-image: url("http://sandbox.misfist.com/portfolio/assets/images/action-switchboard.png"); }
-    #portfolio li .img-background.seeing-more-possibilities {
-      background-image: url("http://sandbox.misfist.com/portfolio/assets/images/seeing-more-possibilities.png"); }
-    #portfolio li .img-background.glocal {
-      background-image: url("http://sandbox.misfist.com/portfolio/assets/images/glocal.png"); }
-    #portfolio li .img-background.yes-men-are-revolting {
-      background-image: url("http://sandbox.misfist.com/portfolio/assets/images/yes-men-are-revolting.png"); }
-    #portfolio li .img-background.sfic {
-      background-image: url("http://sandbox.misfist.com/portfolio/assets/images/sfic.png"); }
-    #portfolio li .img-background.biz-decals {
-      background-image: url("http://sandbox.misfist.com/portfolio/assets/images/1010-biz-decals.png"); }
-  #portfolio li .overlay {
-    display: table;
-    width: 100%;
-    height: 220px;
-    background: rgba(0, 0, 0, 0.5);
-    text-align: center;
-    opacity: 0;
-    -webkit-transition: opacity 0.25s ease;
-    -moz-transition: opacity 0.25s ease; }
-    #portfolio li .overlay:hover,
-    #portfolio li .overlay:focus {
-      opacity: 1; }
-    #portfolio li .overlay .plus {
-      font-size: 36px;
-      display: table-cell;
-      vertical-align: middle; }
+  #portfolio li {
+    padding-top: 10px;
+    padding-bottom: 10px; }
+    #portfolio li .img-background {
+      background-position: center;
+      background-size: cover;
+      background-repeat: no-repeat;
+      overflow: hidden;
+      box-shadow: 1px 1px 0px 0px #5E5D59; }
+      #portfolio li .img-background.al-diaz {
+        background-image: url("http://sandbox.misfist.com/portfolio/assets/images/al-diaz.png"); }
+      #portfolio li .img-background.nyc-prepared {
+        background-image: url("http://sandbox.misfist.com/portfolio/assets/images/nyc-prepared.png"); }
+      #portfolio li .img-background.action-switchboard {
+        background-image: url("http://sandbox.misfist.com/portfolio/assets/images/action-switchboard.png"); }
+      #portfolio li .img-background.seeing-more-possibilities {
+        background-image: url("http://sandbox.misfist.com/portfolio/assets/images/seeing-more-possibilities.png"); }
+      #portfolio li .img-background.glocal {
+        background-image: url("http://sandbox.misfist.com/portfolio/assets/images/glocal.png"); }
+      #portfolio li .img-background.yes-men-are-revolting {
+        background-image: url("http://sandbox.misfist.com/portfolio/assets/images/yes-men-are-revolting.png"); }
+      #portfolio li .img-background.sfic {
+        background-image: url("http://sandbox.misfist.com/portfolio/assets/images/sfic.png"); }
+      #portfolio li .img-background.biz-decals {
+        background-image: url("http://sandbox.misfist.com/portfolio/assets/images/1010-biz-decals.png"); }
+    #portfolio li .overlay {
+      display: table;
+      width: 100%;
+      height: 220px;
+      background: rgba(0, 0, 0, 0.5);
+      text-align: center;
+      opacity: 0;
+      -webkit-transition: opacity 0.25s ease;
+      -moz-transition: opacity 0.25s ease; }
+      #portfolio li .overlay:hover,
+      #portfolio li .overlay:focus {
+        opacity: 1; }
+      #portfolio li .overlay .plus {
+        font-size: 36px;
+        display: table-cell;
+        vertical-align: middle; }
 
 #contact {
   background-image: url("https://41.media.tumblr.com/aaab3ad5e665d412c6d2f77dbaf7424c/tumblr_msr5hbCqFM1s7n9hno1_1280.jpg"); }

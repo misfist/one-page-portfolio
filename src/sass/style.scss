@@ -58,15 +58,20 @@ section {
   @extend %clearfix;
   padding-top: 2em;
   padding-bottom: 2em;
-  min-height: 850px;
+  min-height: 700px;
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
+  background-attachment: fixed
 }
 
 // Main Sections
 #main-nav {
   background-color: $primary;
+  a,
+  a:link {
+    color: $white;
+  }
 }
 
 #home {
@@ -111,15 +116,15 @@ section {
 
   li {
 
-    &+li {
-      padding-top: 10px;
-    }
+    padding-top: 10px;
+    padding-bottom: 10px;
 
     .img-background {
       background-position: center;
       background-size: cover;
       background-repeat: no-repeat;
       overflow: hidden;
+      box-shadow: 1px 1px 0px 0px $primary-dark;
 
       &.al-diaz {
         background-image: url('http://sandbox.misfist.com/portfolio/assets/images/al-diaz.png');
