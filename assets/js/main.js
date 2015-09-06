@@ -1,9 +1,11 @@
-
 $('a[href^="#"]').on('click', function(event) {
 
     // Add active class
     $('li').removeClass('active');
     $(this).closest('li').addClass('active');
+ 
+    // Check if mobile menu is visible
+    var pageOffset = ( $('.navbar-toggle').css('display') == 'none' ) ? (30) : (205);
 
     // Get target
     var target = $( $(this).attr('href') );
@@ -12,13 +14,8 @@ $('a[href^="#"]').on('click', function(event) {
     if( target.length ) {
         event.preventDefault();
         $('html, body').animate({
-            scrollTop: target.offset().top - 30
+            scrollTop: target.offset().top - pageOffset
         }, 800, 'swing');
     }
-
-    var sectionName = $(this.hash).selector;
-    //var sectionName = section.selector
-
-    console.log('sectionName', sectionName);
 
 });
