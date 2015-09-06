@@ -1,19 +1,24 @@
-$(document).ready(function() {
 
-    console.log( 'main.js loaded' );
+$('a[href^="#"]').on('click', function(event) {
 
+    // Add active class
+    $('li').removeClass('active');
+    $(this).closest('li').addClass('active');
 
-    $.scrollTo({margin:true});
+    // Get target
+    var target = $( $(this).attr('href') );
 
-    $("nav a").click(function(event){
-
+    //Move to target (-30)
+    if( target.length ) {
         event.preventDefault();
+        $('html, body').animate({
+            scrollTop: target.offset().top - 30
+        }, 800, 'swing');
+    }
 
-        $('li').removeClass('active');
-        $(this).closest('li').addClass('active');
+    var sectionName = $(this.hash).selector;
+    //var sectionName = section.selector
 
-        $('html,body').scrollTo(this.hash, this.hash);
+    console.log('sectionName', sectionName);
 
-    });
-  
 });

@@ -51,9 +51,18 @@ $black: #333;
   }
 }
 
+%text-background {
+    padding: 10px;
+    background: transparentize($primary-dark, .7);
+}
+
+
 html,
 body {
   font-family: 'Helvetica', 'Arial', sans-serif;
+  height: 100%;
+  min-height: 100%;
+  background-color: $primary-light;
 }
 
 // Block Elements
@@ -73,23 +82,40 @@ h2 {
 
 section {
   @extend %clearfix;
+  width: 100%;
+  min-height: 100%;
   padding-top: 2em;
   padding-bottom: 2em;
   min-height: 700px;
   background-position: center;
-  background-size: cover;
+  background-size: auto 100%;
   background-repeat: no-repeat;
-  background-attachment: fixed
+  background-attachment: fixed;
+}
+
+@media only screen and (min-width : 768px) {
+  section {
+    background-size: cover;
+    height: 100vh;
+  }
 }
 
 // Main Sections
+
+.container {
+  @extend %clearfix;
+}
+
 #main-nav {
   background-color: $primary;
+
   a,
   a:link {
     color: $white;
   }
 }
+
+
 
 /* Small Devices, Tablets */
 @media only screen and (min-width : 768px) {
@@ -104,7 +130,12 @@ section {
 
 #home {
   padding-top: 240px;
-  background-image: url('http://www.magic4walls.com/wp-content/uploads/2014/02/city-new-york-vintage-photography-skyscrapers-evening-hd-wallpaper.jpg');
+  background-image: url('https://41.media.tumblr.com/aaab3ad5e665d412c6d2f77dbaf7424c/tumblr_msr5hbCqFM1s7n9hno1_1280.jpg');
+
+  header {
+    @extend %text-background;
+    padding: 20px;
+  }
 
   h1,
   h2 {
@@ -127,10 +158,13 @@ section {
 #about {
   background-image: url('http://animalnewyork.com/wp-content/uploads/Editta-Sherman-87930d_EdittaShermanSubway_Cunningham.jpg');
   
+  h1 {
+    @extend %text-background;
+  }
+
   article {
-    padding-top: 20px;
-    padding-bottom: 20px;
-    background: rgba(0,0,0,0.2);
+    @extend %text-background;
+    padding: 20px;
   }
 
   p {
@@ -138,10 +172,22 @@ section {
     font-size: 20px;
     line-height: 30px;
   }
+
+  .image-border {
+    text-align: center;
+    max-width: 75%;
+  }
 }
 
 #portfolio {
   background-image: url('http://static1.squarespace.com/static/52b9c541e4b05b51357ee1b8/t/555f58c1e4b025563eb623b0/1432312002451/coney_island_ferris_wheel-wallpaper-1440x900.jpg?format=2500w');
+  
+  height: 100%;
+  min-height: 900px !important;
+
+  header {
+    @extend %text-background;
+  }
 
   li {
 
@@ -186,7 +232,7 @@ section {
       display: table;
       width: 100%;
       height: 220px;
-      background: rgba(0,0,0,.7);
+      background: transparentize($primary, .2);
       text-align: center;
       opacity: 0;
       transition: opacity .25s ease;
@@ -199,7 +245,8 @@ section {
       }
 
       .plus {
-        font-size: 36px;
+        @extend %header;
+        font-size: 24px;
         color: $white;
         display: table-cell;
         vertical-align: middle;
@@ -208,10 +255,23 @@ section {
 
   }
 
+  /* Small Devices, Tablets */
+  @media only screen and (min-width : 768px) {
+
+    .plus {
+      font-size: 36px;
+    }
+
+  }
+
 }
 
 #contact {
-  background-image: url('https://41.media.tumblr.com/aaab3ad5e665d412c6d2f77dbaf7424c/tumblr_msr5hbCqFM1s7n9hno1_1280.jpg');
+  background-image: url('http://www.magic4walls.com/wp-content/uploads/2014/02/city-new-york-vintage-photography-skyscrapers-evening-hd-wallpaper.jpg');
+
+  h1 {
+    @extend %text-background;
+  }
   .social-links {
     li {
       padding: 5px 0;
@@ -220,9 +280,12 @@ section {
 }
 
 footer {
-  background-color: $primary-light;
+  @extend %clearfix;
+  background-color: $primary-dark;
   padding-top: 20px;
   padding-bottom: 20px;
+
+  color: $white;
   a,
   a:link {
     color: $white;
@@ -236,7 +299,11 @@ footer {
 // Common Elements
 
 em {
-  color: $accent;
+  font-style: italic;
+}
+
+p + p {
+  padding-top: 20px;
 }
 
 .btn {
@@ -267,6 +334,10 @@ em {
   a:link {
     color: $white;
   }
+}
+
+.navbar-inverse .navbar-toggle {
+  border-color: $white;
 }
 
 .image-border {
