@@ -1,0 +1,106 @@
+// Variables
+$primary: #787874;
+$primary-dark: #5E5D59;
+$primary-light: #959595;
+$secondary: #504E51;
+$secondary-dark: #3E3C3F;
+$secondary-light: #656565;
+$tertiary: #5E1C5E;
+
+$white: #fff;
+$black: #333;
+
+// Extends
+%fake-browser-ui {
+  .frame {
+    display: block;
+    height: 15px;
+    position: absolute;
+    top: 5px;
+    left: 1px;
+  }
+  
+  span {
+    height: 8px;
+    width: 8px;
+    border-radius: 8px;
+    background-color: #eee;
+    border: 1px solid #dadada;
+    float: left;
+    margin: 0 0 0 4px;
+  }
+}
+
+%header {
+  font-family: 'Montserrat', sans-serif;
+}
+
+// Block Elements
+h1,
+h2 {
+  @extend %header;
+}
+
+section {
+  padding-top: 2em;
+  padding-bottom: 2em;
+  height: 850px;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+// Main Sections
+#main-nav {
+  background-color: $primary;
+
+  h1.navbar-brand {
+    margin-top: 0;
+    a,
+    a:link {
+      color: $white;
+    }
+  }
+}
+
+#home {
+  padding-top: 240px;
+  background-image: url('http://www.magic4walls.com/wp-content/uploads/2014/02/city-new-york-vintage-photography-skyscrapers-evening-hd-wallpaper.jpg');
+  background-position: center;
+  background-size: cover;
+}
+
+#about {
+  background-image: url('http://static1.squarespace.com/static/52b9c541e4b05b51357ee1b8/t/555f58c1e4b025563eb623b0/1432312002451/coney_island_ferris_wheel-wallpaper-1440x900.jpg?format=2500w');
+  background-position: fixed center;
+  background-size: cover;
+}
+
+#portfolio {
+  background-image: url('https://41.media.tumblr.com/aaab3ad5e665d412c6d2f77dbaf7424c/tumblr_msr5hbCqFM1s7n9hno1_1280.jpg');
+}
+
+#contact {
+  background-image: url('http://animalnewyork.com/wp-content/uploads/Editta-Sherman-87930d_EdittaShermanSubway_Cunningham.jpg');
+}
+
+footer {
+  background-color: $primary-dark;
+  a,
+  a:link {
+    color: $white;
+    &:hover,
+    &:focus {
+      color: $white;
+    }
+  }
+}
+
+// Common Elements
+img {}
+
+// Specific Elements
+.image-border {
+  border: 15px solid $primary;
+  border-radius: 50%;
+}
