@@ -1,13 +1,14 @@
-@import 'hover/hover';
 
 // Variables
-$primary: #787874;
-$primary-dark: #5E5D59;
-$primary-light: #959595;
-$secondary: #504E51;
-$secondary-dark: #3E3C3F;
-$secondary-light: #656565;
-$tertiary: #5E1C5E;
+
+$primary: #2F4550;
+$primary-dark: #2D2D2D;
+$primary-light: #989898;
+$secondary: #677743;
+$secondary-dark: #434343;
+$secondary-light: #E2E2E1;
+$tertiary: $secondary;
+$accent: #B94019;
 
 $white: #fff;
 $black: #333;
@@ -157,9 +158,10 @@ section {
       display: table;
       width: 100%;
       height: 220px;
-      background: rgba(0,0,0,.50);
+      background: rgba(0,0,0,.7);
       text-align: center;
       opacity: 0;
+      transition: opacity .25s ease;
       -webkit-transition: opacity .25s ease;
       -moz-transition: opacity .25s ease;
 
@@ -184,7 +186,7 @@ section {
 }
 
 footer {
-  background-color: $primary-dark;
+  background-color: $primary-light;
   padding-top: 20px;
   padding-bottom: 20px;
   a,
@@ -198,16 +200,14 @@ footer {
 }
 
 // Common Elements
-img {
-  @extend .hvr-fade;
-}
+img {}
 
 .btn {
   box-shadow: 1px 1px 0px 0px $primary-light;
-  @extend .hvr-grow;
+  transition: all .2s ease-in-out;
   @extend %header;
 
-  background-color: $black;
+  background-color: $accent;
   color: $white;
 
   a,
@@ -218,6 +218,7 @@ img {
   &:hover,
   &:focus {
     color: $white;
+    transform: scale(1.1);
   }
 }
 
@@ -232,7 +233,7 @@ img {
 }
 
 .image-border {
-  border: 15px solid $primary;
+  border: 15px solid $accent;
   border-radius: 50%;
 }
 
