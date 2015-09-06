@@ -35,6 +35,17 @@ $black: #333;
 
 %header {
   font-family: 'Montserrat', sans-serif;
+  color: $white;
+  text-shadow: 1px 1px 1px $black;
+  text-shadow: -1px -1px -1px $primary-light;
+}
+
+%clearfix {
+  &:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
 }
 
 // Block Elements
@@ -43,10 +54,18 @@ h2 {
   @extend %header;
 }
 
+// h1,
+// h2 {
+//   color: $white;
+//   text-shadow: 1px 1px 1px $black;
+//   text-shadow: -1px -1px -1px $primary-light;
+// }
+
 section {
+  @extend %clearfix;
   padding-top: 2em;
   padding-bottom: 2em;
-  height: 850px;
+  min-height: 850px;
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
@@ -63,10 +82,7 @@ section {
 
   h1,
   h2 {
-    margin: 0;
-    color: $white;
-    text-shadow: 1px 1px 1px $black;
-    text-shadow: -1px -1px -1px $primary-light;
+      margin: 0;
   }
 
   h1 {
@@ -85,21 +101,57 @@ section {
 #about {
   background-image: url('https://41.media.tumblr.com/aaab3ad5e665d412c6d2f77dbaf7424c/tumblr_msr5hbCqFM1s7n9hno1_1280.jpg');
 
+  p {
+    @extend %header;
+    font-size: 20px;
+  }
 }
 
 #portfolio {
   background-image: url('http://static1.squarespace.com/static/52b9c541e4b05b51357ee1b8/t/555f58c1e4b025563eb623b0/1432312002451/coney_island_ferris_wheel-wallpaper-1440x900.jpg?format=2500w');
 
   li {
-    background-position: center;
-    background-size: cover;
-    background-repeat: no-repeat;
 
-    margin: 5% auto 0 auto; 
-    overflow: hidden;
+    &+li {
+      padding-top: 10px;
+    }
+
+    .img-background {
+      background-position: center;
+      background-size: cover;
+      background-repeat: no-repeat;
+      overflow: hidden;
+
+      &.al-diaz {
+        background-image: url('http://sandbox.misfist.com/portfolio/assets/images/al-diaz.png');
+      }
+      &.nyc-prepared {
+        background-image: url('http://sandbox.misfist.com/portfolio/assets/images/nyc-prepared.png');
+      }
+      &.action-switchboard {
+        background-image: url('http://sandbox.misfist.com/portfolio/assets/images/action-switchboard.png');
+      }
+      &.seeing-more-possibilities {
+        background-image: url('http://sandbox.misfist.com/portfolio/assets/images/seeing-more-possibilities.png');
+      }
+      &.glocal {
+        background-image: url('http://sandbox.misfist.com/portfolio/assets/images/glocal.png');
+      }
+      &.yes-men-are-revolting {
+        background-image: url('http://sandbox.misfist.com/portfolio/assets/images/yes-men-are-revolting.png');
+      }
+      &.sfic {
+        background-image: url('http://sandbox.misfist.com/portfolio/assets/images/sfic.png');
+      }
+      &.biz-decals{
+        background-image: url('http://sandbox.misfist.com/portfolio/assets/images/1010-biz-decals.png');
+      }
+
+    }
 
     .overlay {
-      width: 360px;
+      display: table;
+      width: 100%;
       height: 220px;
       background: rgba(0,0,0,.50);
       text-align: center;
@@ -113,35 +165,12 @@ section {
       }
 
       .plus {
-        font-size: 96px;
-        line-height: 200px;
+        font-size: 36px;
+        display: table-cell;
+        vertical-align: middle;
       }
     }
 
-    &.al-diaz {
-      background-image: url('assets/images/al-diaz.png');
-    }
-    &.nyc-prepared {
-      background-image: url('assets/images/nyc-prepared.png');
-    }
-    &.al-diaz {
-      background-image: url('assets/images/al-diaz.png');
-    }
-    &.al-diaz {
-      background-image: url('assets/images/al-diaz.png');
-    }
-    &.al-diaz {
-      background-image: url('assets/images/al-diaz.png');
-    }
-    &.al-diaz {
-      background-image: url('assets/images/al-diaz.png');
-    }
-    &.al-diaz {
-      background-image: url('assets/images/al-diaz.png');
-    }
-    &.al-diaz {
-      background-image: url('assets/images/al-diaz.png');
-    }
   }
 
 }
