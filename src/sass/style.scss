@@ -1,4 +1,6 @@
 
+@import 'reset';
+
 // Variables
 
 $primary: #2F4550;
@@ -49,10 +51,24 @@ $black: #333;
   }
 }
 
+html,
+body {
+  font-family: 'Helvetica', 'Arial', sans-serif;
+}
+
 // Block Elements
 h1,
 h2 {
   @extend %header;
+  margin: 10px 0;
+}
+
+h1 {
+  font-size: 46px;
+}
+
+h2 {
+  font-size: 30px;
 }
 
 section {
@@ -73,6 +89,17 @@ section {
   a:link {
     color: $white;
   }
+}
+
+/* Small Devices, Tablets */
+@media only screen and (min-width : 768px) {
+
+  #main-nav {
+    .navbar-nav {
+      float: right;
+    }
+  }
+
 }
 
 #home {
@@ -102,13 +129,14 @@ section {
   
   article {
     padding-top: 20px;
+    padding-bottom: 20px;
     background: rgba(0,0,0,0.2);
   }
 
   p {
     @extend %header;
     font-size: 20px;
-    line-spacing: 30px;
+    line-height: 30px;
   }
 }
 
@@ -184,6 +212,11 @@ section {
 
 #contact {
   background-image: url('https://41.media.tumblr.com/aaab3ad5e665d412c6d2f77dbaf7424c/tumblr_msr5hbCqFM1s7n9hno1_1280.jpg');
+  .social-links {
+    li {
+      padding: 5px 0;
+    }
+  }
 }
 
 footer {
@@ -201,7 +234,10 @@ footer {
 }
 
 // Common Elements
-img {}
+
+em {
+  color: $accent;
+}
 
 .btn {
   box-shadow: 1px 1px 0px 0px $primary-light;
