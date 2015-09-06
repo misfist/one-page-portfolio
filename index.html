@@ -8,86 +8,13 @@
     <link rel="stylesheet" href="css/reset.css">
 
     <link rel='stylesheet prefetch' href='http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css'>
-<link rel='stylesheet prefetch' href='https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css'>
-<link rel='stylesheet prefetch' href='https://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet''>
+    <link rel='stylesheet prefetch' href='https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css'>
+    <link rel='stylesheet prefetch' href='https://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet'>    
 
-        <style>
-      /* NOTE: The styles were added inline because Prefixfree needs access to your styles and they must be inlined if they are on local disk! */
-      h1,
-h2 {
-  font-family: 'Montserrat', sans-serif;
-}
-
-section {
-  padding-top: 2em;
-  padding-bottom: 2em;
-  height: 850px;
-  background-position: center;
-  background-size: cover;
-  background-repeat: no-repeat;
-}
-
-#main-nav {
-  background-color: #787874;
-}
-#main-nav h1.navbar-brand {
-  margin-top: 0;
-}
-#main-nav h1.navbar-brand a,
-#main-nav h1.navbar-brand a:link {
-  color: #fff;
-}
-
-#home {
-  padding-top: 240px;
-  background-image: url("http://www.magic4walls.com/wp-content/uploads/2014/02/city-new-york-vintage-photography-skyscrapers-evening-hd-wallpaper.jpg");
-  background-position: center;
-  background-size: cover;
-}
-
-#about {
-  background-image: url("http://static1.squarespace.com/static/52b9c541e4b05b51357ee1b8/t/555f58c1e4b025563eb623b0/1432312002451/coney_island_ferris_wheel-wallpaper-1440x900.jpg?format=2500w");
-  background-position: fixed center;
-  background-size: cover;
-}
-
-#portfolio {
-  background-image: url("https://41.media.tumblr.com/aaab3ad5e665d412c6d2f77dbaf7424c/tumblr_msr5hbCqFM1s7n9hno1_1280.jpg");
-}
-
-#contact {
-  background-image: url("http://animalnewyork.com/wp-content/uploads/Editta-Sherman-87930d_EdittaShermanSubway_Cunningham.jpg");
-}
-
-footer {
-  background-color: #5E5D59;
-}
-footer a,
-footer a:link {
-  color: #fff;
-}
-footer a:hover, footer a:focus,
-footer a:link:hover,
-footer a:link:focus {
-  color: #fff;
-}
-
-.image-border {
-  border: 15px solid #787874;
-  border-radius: 50%;
-}
-
-    </style>
-
-    
-        <script src="js/prefixfree.min.js"></script>
-
-    
+    <link rel="stylesheet" href="assets/css/style.css">
   </head>
 
   <body>
-
-    
   <nav id="main-nav" class="navbar navbar-inverse navbar-fixed-top" role="navigation">
       <div class="container">
           <div class="navbar-header">
@@ -99,10 +26,10 @@ footer a:link:focus {
 
           <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
               <ul class="nav navbar-nav">
-              <li><a link="#home">Home</a></li>
-              <li><a link="#about">About</a></li>
-              <li><a link="#portfolio">Portfolio</a></li>
-              <li><a link="#contact">Contact</a></li>
+              <li><a href="#home">Home</a></li>
+              <li><a href="#about">About</a></li>
+              <li><a href="#portfolio">Portfolio</a></li>
+              <li><a href="#contact">Contact</a></li>
             </ul>
           </div>
       </div>
@@ -140,14 +67,18 @@ footer a:link:focus {
       <h2>Below is some of my recent work.</h2>
       <div>
         <ul class="list-unstyled row">
-          <li class="col-xs-6 col-md-3">Test</li>
-          <li class="col-sm-6 col-md-3">Test</li>
-          <li class="col-sm-6 col-md-3">Test</li>
-          <li class="col-sm-6 col-md-3">Test</li>
-          <li class="col-sm-6 col-md-3">Test</li>
-          <li class="col-sm-6 col-md-3">Test</li>
-          <li class="col-sm-6 col-md-3">Test</li>
-          <li class="col-sm-6 col-md-3">Test</li>
+            <li class="col-xs-6 col-md-4 al-diaz">
+                <div class="overlay hvr-fade">
+                    <span class="plus">+</span>
+                </div>
+            </li>
+            <li class="col-sm-6 col-md-4 nyc-prepared"></li>
+            <li class="col-sm-6 col-md-4 action-switchboard"><img src="assets/images/action-switchboard.png" class="img-responsive"></li>
+            <li class="col-sm-6 col-md-4 seeing-more-possibilities"><img src="assets/images/seeing-more-possibilities.png" class="img-responsive"></li>
+            <li class="col-sm-6 col-md-4 glocal"><img src="assets/images/glocal.png" class="img-responsive"></li>
+            <li class="col-sm-6 col-md-4 yes-men-are-revolting"><img src="assets/images/yes-men-are-revolting.png" class="img-responsive"></li>
+            <li class="col-sm-6 col-md-4 sfic"><img src="assets/images/sfic.png" class="img-responsive"></li>
+            <li class="col-sm-6 col-md-4 1010-biz-decals"></li>
         </ul>
       </div>
     </div>
@@ -157,10 +88,10 @@ footer a:link:focus {
       <h1>Contact Me</h1>
       <nav class="social-links">
         <ul class="list-unstyled">
-          <li class="twitter"><button><span class="fa fa-twitter"></span> <a href="https://twitter.com/misfist" target="_blank">Twitter</a></button></li>
-          <li class="linkedin"><button><span class="fa fa-linkedin"></span> <a href="https://www.linkedin.com/in/patricialutz">LinkedIn</a></button></li>
-          <li class="github"><button><span class="fa fa-github"></span> <a href="https://github.com/misfist" target="_blank">GitHub</a></button></li>
-          <li class="freecodecamp"><button><span class="fa fa-fire"></span> <a href="http://www.freecodecamp.com/misfist" target="_blank">freeCodeCamp</a></button></li>
+          <li class="twitter"><button class="btn"><span class="fa fa-twitter"></span> <a href="https://twitter.com/misfist" target="_blank">Twitter</a></button></li>
+          <li class="linkedin"><button class="btn"><span class="fa fa-linkedin"></span> <a href="https://www.linkedin.com/in/patricialutz">LinkedIn</a></button></li>
+          <li class="github"><button class="btn"><span class="fa fa-github"></span> <a href="https://github.com/misfist" target="_blank">GitHub</a></button></li>
+          <li class="freecodecamp"><button class="btn"><span class="fa fa-fire"></span> <a href="http://www.freecodecamp.com/misfist" target="_blank">freeCodeCamp</a></button></li>
         </ul>
       </nav>
     </div>

@@ -36,5 +36,8 @@
     "gulp-uglify": "^1.2.0",
     "gulp-watch": "^4.3.4",
     "jshint-stylish": "^2.0.1"
+  },
+  "dependencies": {
+    "hover.css": "^2.0.2"
   }
 }
