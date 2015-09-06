@@ -90,6 +90,7 @@ section {
         opacity: 1; }
       #portfolio li .overlay .plus {
         font-size: 36px;
+        color: #fff;
         display: table-cell;
         vertical-align: middle; }
 
