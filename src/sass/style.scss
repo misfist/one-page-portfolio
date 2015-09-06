@@ -54,13 +54,6 @@ h2 {
   @extend %header;
 }
 
-// h1,
-// h2 {
-//   color: $white;
-//   text-shadow: 1px 1px 1px $black;
-//   text-shadow: -1px -1px -1px $primary-light;
-// }
-
 section {
   @extend %clearfix;
   padding-top: 2em;
@@ -99,11 +92,17 @@ section {
 }
 
 #about {
-  background-image: url('https://41.media.tumblr.com/aaab3ad5e665d412c6d2f77dbaf7424c/tumblr_msr5hbCqFM1s7n9hno1_1280.jpg');
+  background-image: url('http://animalnewyork.com/wp-content/uploads/Editta-Sherman-87930d_EdittaShermanSubway_Cunningham.jpg');
+  
+  article {
+    padding-top: 20px;
+    background: rgba(0,0,0,0.2);
+  }
 
   p {
     @extend %header;
     font-size: 20px;
+    line-spacing: 30px;
   }
 }
 
@@ -176,11 +175,13 @@ section {
 }
 
 #contact {
-  background-image: url('http://animalnewyork.com/wp-content/uploads/Editta-Sherman-87930d_EdittaShermanSubway_Cunningham.jpg');
+  background-image: url('https://41.media.tumblr.com/aaab3ad5e665d412c6d2f77dbaf7424c/tumblr_msr5hbCqFM1s7n9hno1_1280.jpg');
 }
 
 footer {
   background-color: $primary-dark;
+  padding-top: 20px;
+  padding-bottom: 20px;
   a,
   a:link {
     color: $white;

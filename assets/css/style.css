@@ -4388,9 +4388,13 @@ section {
     box-shadow: 0px -1px 0px 0px #333; }
 
 #about {
-  background-image: url("https://41.media.tumblr.com/aaab3ad5e665d412c6d2f77dbaf7424c/tumblr_msr5hbCqFM1s7n9hno1_1280.jpg"); }
+  background-image: url("http://animalnewyork.com/wp-content/uploads/Editta-Sherman-87930d_EdittaShermanSubway_Cunningham.jpg"); }
+  #about article {
+    padding-top: 20px;
+    background: rgba(0, 0, 0, 0.2); }
   #about p {
-    font-size: 20px; }
+    font-size: 20px;
+    line-spacing: 30px; }
 
 #portfolio {
   background-image: url("http://static1.squarespace.com/static/52b9c541e4b05b51357ee1b8/t/555f58c1e4b025563eb623b0/1432312002451/coney_island_ferris_wheel-wallpaper-1440x900.jpg?format=2500w"); }
@@ -4435,10 +4439,12 @@ section {
       vertical-align: middle; }
 
 #contact {
-  background-image: url("http://animalnewyork.com/wp-content/uploads/Editta-Sherman-87930d_EdittaShermanSubway_Cunningham.jpg"); }
+  background-image: url("https://41.media.tumblr.com/aaab3ad5e665d412c6d2f77dbaf7424c/tumblr_msr5hbCqFM1s7n9hno1_1280.jpg"); }
 
 footer {
-  background-color: #5E5D59; }
+  background-color: #5E5D59;
+  padding-top: 20px;
+  padding-bottom: 20px; }
   footer a,
   footer a:link {
     color: #fff; }
