@@ -403,6 +403,14 @@ figure {
   }
 }
 
+.copyleft {
+  color: $primary-light;
+
+  a,
+  a:link {
+    color: $primary-light;
+  }
+}
 
 // Specific Elements
 .navbar-brand {

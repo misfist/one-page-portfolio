@@ -239,6 +239,12 @@ p + p {
     color: #fff;
     transform: scale(1.1); }
 
+.copyleft {
+  color: #989898; }
+  .copyleft a,
+  .copyleft a:link {
+    color: #989898; }
+
 .navbar-brand {
   margin: 0; }
   .navbar-brand a,
