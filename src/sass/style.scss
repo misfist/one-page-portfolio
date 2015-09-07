@@ -15,6 +15,31 @@ $accent: #B94019;
 $white: #fff;
 $black: #333;
 
+
+// RWD BREAKPOINTS 
+// mobile first! so you only have to use floats etc in larger sizes
+// set breakpoints where your content breaks, not particular devices
+
+$xs: 768px; //Extra Small Phones
+$sm: 769px; //Small Devices Tablets and Up
+$md: 992px; //Medium Devices  Desktops and Up
+$lg: 1200px; //Large Devices Large Desktops and Up
+
+@mixin breakpoint($point) {
+  @if $point == xs {
+    @media screen and (max-width: 768px)  { @content; } 
+  }
+  @if $point == sm {
+    @media screen and (min-width: 769px) { @content; }
+  }
+  @if $point == md {
+    @media screen and (min-width: 992px) { @content; }
+  }
+  @else if $point == lg {
+    @media screen and (min-width: 1200px) { @content; }
+  }
+}
+
 // Extends
 %fake-browser-ui {
   .frame {
@@ -43,6 +68,15 @@ $black: #333;
   text-shadow: -1px -1px -1px $primary-light;
 }
 
+// CLEARFIX
+// for old markup w/clearfix class:
+.clearfix:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+// for semantic markup, a la http://blog.teamtreehouse.com/a-better-clearfix-with-sass
 %clearfix {
   &:after {
     content: "";
@@ -59,10 +93,24 @@ $black: #333;
 
 html,
 body {
-  font-family: 'Helvetica', 'Arial', sans-serif;
   height: 100%;
   min-height: 100%;
+}
+
+body {
+  font-family: 'Helvetica', 'Arial', sans-serif;
+  background-image: url('https://41.media.tumblr.com/aaab3ad5e665d412c6d2f77dbaf7424c/tumblr_msr5hbCqFM1s7n9hno1_1280.jpg');
   background-color: $primary-light;
+  background-size: cover;
+  background-position: top;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+@media only screen and (min-width : 768px) {
+  body {
+    background-image: none;
+  }
 }
 
 // Block Elements
@@ -115,8 +163,6 @@ section {
   }
 }
 
-
-
 /* Small Devices, Tablets */
 @media only screen and (min-width : 768px) {
 
@@ -128,9 +174,10 @@ section {
 
 }
 
+// Home Section
 #home {
-  padding-top: 240px;
-  background-image: url('https://41.media.tumblr.com/aaab3ad5e665d412c6d2f77dbaf7424c/tumblr_msr5hbCqFM1s7n9hno1_1280.jpg');
+
+  padding-top: 100px;
 
   header {
     @extend %text-background;
@@ -155,9 +202,15 @@ section {
 
 }
 
+@media only screen and (min-width : 768px) {
+  #home {
+    padding-top: 240px;
+    background-image: url('https://41.media.tumblr.com/aaab3ad5e665d412c6d2f77dbaf7424c/tumblr_msr5hbCqFM1s7n9hno1_1280.jpg');
+  }
+}
+
 #about {
-  background-image: url('http://animalnewyork.com/wp-content/uploads/Editta-Sherman-87930d_EdittaShermanSubway_Cunningham.jpg');
-  
+
   h1 {
     @extend %text-background;
   }
@@ -179,11 +232,14 @@ section {
   }
 }
 
+@media only screen and (min-width : 768px) {
+  #about {
+    background-image: url('http://animalnewyork.com/wp-content/uploads/Editta-Sherman-87930d_EdittaShermanSubway_Cunningham.jpg');
+  }
+}
+
 #portfolio {
-  background-image: url('http://static1.squarespace.com/static/52b9c541e4b05b51357ee1b8/t/555f58c1e4b025563eb623b0/1432312002451/coney_island_ferris_wheel-wallpaper-1440x900.jpg?format=2500w');
-  
-  height: 100%;
-  min-height: 900px !important;
+  min-height: 100%;
 
   header {
     @extend %text-background;
@@ -266,9 +322,14 @@ section {
 
 }
 
-#contact {
-  background-image: url('http://www.magic4walls.com/wp-content/uploads/2014/02/city-new-york-vintage-photography-skyscrapers-evening-hd-wallpaper.jpg');
+@media only screen and (min-width : 768px) {
+  #portfolio {
+    background-image: url('http://static1.squarespace.com/static/52b9c541e4b05b51357ee1b8/t/555f58c1e4b025563eb623b0/1432312002451/coney_island_ferris_wheel-wallpaper-1440x900.jpg?format=2500w');
+    //min-height: 900px;
+  }
+}
 
+#contact {
   h1 {
     @extend %text-background;
   }
@@ -276,6 +337,12 @@ section {
     li {
       padding: 5px 0;
     }
+  }
+}
+
+@media only screen and (min-width : 768px) {
+  #contact {
+    background-image: url('http://www.magic4walls.com/wp-content/uploads/2014/02/city-new-york-vintage-photography-skyscrapers-evening-hd-wallpaper.jpg');
   }
 }
 
@@ -304,6 +371,16 @@ em {
 
 p + p {
   padding-top: 20px;
+}
+
+figure {
+
+  @include breakpoint(xs) {
+    img {
+      margin: 0 auto;
+    }
+  }
+
 }
 
 .btn {

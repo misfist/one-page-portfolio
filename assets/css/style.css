@@ -37,6 +37,11 @@ h2, #about p, #portfolio li .overlay .plus, .btn {
   text-shadow: 1px 1px 1px #333;
   text-shadow: -1px -1px -1px #989898; }
 
+.clearfix:after {
+  content: "";
+  display: table;
+  clear: both; }
+
 section:after, .container:after, footer:after {
   content: "";
   display: table;
@@ -48,10 +53,21 @@ section:after, .container:after, footer:after {
 
 html,
 body {
-  font-family: 'Helvetica', 'Arial', sans-serif;
   height: 100%;
-  min-height: 100%;
-  background-color: #989898; }
+  min-height: 100%; }
+
+body {
+  font-family: 'Helvetica', 'Arial', sans-serif;
+  background-image: url("https://41.media.tumblr.com/aaab3ad5e665d412c6d2f77dbaf7424c/tumblr_msr5hbCqFM1s7n9hno1_1280.jpg");
+  background-color: #989898;
+  background-size: cover;
+  background-position: top;
+  background-repeat: no-repeat;
+  background-attachment: fixed; }
+
+@media only screen and (min-width: 768px) {
+  body {
+    background-image: none; } }
 
 h1,
 h2 {
@@ -91,8 +107,7 @@ section {
     float: right; } }
 
 #home {
-  padding-top: 240px;
-  background-image: url("https://41.media.tumblr.com/aaab3ad5e665d412c6d2f77dbaf7424c/tumblr_msr5hbCqFM1s7n9hno1_1280.jpg"); }
+  padding-top: 100px; }
   #home header {
     padding: 20px; }
   #home h1,
@@ -106,21 +121,28 @@ section {
     border-top: 2px solid #fff;
     box-shadow: 0px -1px 0px 0px #333; }
 
-#about {
-  background-image: url("http://animalnewyork.com/wp-content/uploads/Editta-Sherman-87930d_EdittaShermanSubway_Cunningham.jpg"); }
-  #about article {
-    padding: 20px; }
-  #about p {
-    font-size: 20px;
-    line-height: 30px; }
-  #about .image-border {
-    text-align: center;
-    max-width: 75%; }
+@media only screen and (min-width: 768px) {
+  #home {
+    padding-top: 240px;
+    background-image: url("https://41.media.tumblr.com/aaab3ad5e665d412c6d2f77dbaf7424c/tumblr_msr5hbCqFM1s7n9hno1_1280.jpg"); } }
+
+#about article {
+  padding: 20px; }
+
+#about p {
+  font-size: 20px;
+  line-height: 30px; }
+
+#about .image-border {
+  text-align: center;
+  max-width: 75%; }
+
+@media only screen and (min-width: 768px) {
+  #about {
+    background-image: url("http://animalnewyork.com/wp-content/uploads/Editta-Sherman-87930d_EdittaShermanSubway_Cunningham.jpg"); } }
 
 #portfolio {
-  background-image: url("http://static1.squarespace.com/static/52b9c541e4b05b51357ee1b8/t/555f58c1e4b025563eb623b0/1432312002451/coney_island_ferris_wheel-wallpaper-1440x900.jpg?format=2500w");
-  height: 100%;
-  min-height: 900px !important;
+  min-height: 100%;
   /* Small Devices, Tablets */ }
   #portfolio li {
     padding-top: 10px;
@@ -169,10 +191,16 @@ section {
     #portfolio .plus {
       font-size: 36px; } }
 
-#contact {
-  background-image: url("http://www.magic4walls.com/wp-content/uploads/2014/02/city-new-york-vintage-photography-skyscrapers-evening-hd-wallpaper.jpg"); }
-  #contact .social-links li {
-    padding: 5px 0; }
+@media only screen and (min-width: 768px) {
+  #portfolio {
+    background-image: url("http://static1.squarespace.com/static/52b9c541e4b05b51357ee1b8/t/555f58c1e4b025563eb623b0/1432312002451/coney_island_ferris_wheel-wallpaper-1440x900.jpg?format=2500w"); } }
+
+#contact .social-links li {
+  padding: 5px 0; }
+
+@media only screen and (min-width: 768px) {
+  #contact {
+    background-image: url("http://www.magic4walls.com/wp-content/uploads/2014/02/city-new-york-vintage-photography-skyscrapers-evening-hd-wallpaper.jpg"); } }
 
 footer {
   background-color: #2D2D2D;
@@ -193,6 +221,10 @@ em {
 
 p + p {
   padding-top: 20px; }
+
+@media screen and (max-width: 768px) {
+  figure img {
+    margin: 0 auto; } }
 
 .btn {
   box-shadow: 1px 1px 0px 0px #989898;
