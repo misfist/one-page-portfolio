@@ -90,6 +90,16 @@ $lg: 1200px; //Large Devices Large Desktops and Up
     background: transparentize($primary-dark, .7);
 }
 
+%grow {
+  transition: all .2s;
+
+  &:hover,
+  &:focus {
+    transform: scale(1.1);
+    @extend %box-shadow;
+  }
+}
+
 
 html,
 body {
@@ -129,8 +139,9 @@ h2 {
 }
 
 section {
+  display: block;
   @extend %clearfix;
-  width: 100%;
+  // width: 100%;
   min-height: 100%;
   padding-top: 2em;
   padding-bottom: 2em;
@@ -144,7 +155,7 @@ section {
 @media only screen and (min-width : 768px) {
   section {
     background-size: cover;
-    height: 100vh;
+    min-height: 100%;
   }
 }
 
@@ -287,7 +298,7 @@ section {
     .overlay {
       display: table;
       width: 100%;
-      height: 220px;
+      height: 300px;
       background: transparentize($primary, .2);
       text-align: center;
       opacity: 0;
@@ -319,13 +330,12 @@ section {
     }
 
   }
-
 }
 
 @media only screen and (min-width : 768px) {
   #portfolio {
     background-image: url('http://static1.squarespace.com/static/52b9c541e4b05b51357ee1b8/t/555f58c1e4b025563eb623b0/1432312002451/coney_island_ferris_wheel-wallpaper-1440x900.jpg?format=2500w');
-    //min-height: 900px;
+    min-height: 100%;
   }
 }
 
@@ -349,8 +359,8 @@ section {
 footer {
   @extend %clearfix;
   background-color: $primary-dark;
-  padding-top: 20px;
-  padding-bottom: 20px;
+  padding-top: 10px;
+  padding-bottom: 10px;
 
   color: $white;
   a,
@@ -426,8 +436,29 @@ figure {
 }
 
 .image-border {
-  border: 15px solid $accent;
+  border: 15px solid $primary-light;
   border-radius: 50%;
+}
+
+.image-thumb {
+  width: 280px;
+  height: 280px;    
+  overflow: hidden;
+  margin: 0 auto;
+
+  background-size: cover;
+  background-position: top;
+}
+
+@media only screen and (min-width : 768px) {
+  .image-thumb {
+    width: 300px;
+    height: 300px;    
+  }
+}
+
+.image-grow {
+  @extend %grow;
 }
 
 .social-links {
